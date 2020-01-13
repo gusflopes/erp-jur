@@ -1,0 +1,16 @@
+{
+  "name": "erp-jur",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gusflopes/erp-jur.git",
+  "author": "gusflopes <gusflopes86@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "backend",
+      "frontend/*",
+      "shared/*"
+    ]
+  }
+}
