@@ -2,16 +2,23 @@ import Sequelize, { Model } from 'sequelize';
 
 import bcrypt from 'bcryptjs';
 
-class User extends Model {
+class Client extends Model {
   static init(sequelize) {
     super.init(
       {
         name: Sequelize.STRING,
-        // cpf, nascimento, NIS, RG, estado_civil, profissao, cep, endereco, telefone
+        cpf: Sequelize.STRING,
+
+        rg: Sequelize.STRING,
+        birth_date: Sequelize.STRING,
+        nit: sequelize.STRING,
+        marital_status: Sequelize.STRING,
+        occupattion: Sequelize.STRING,
+
+        telephone_id: Sequelize.INTEGER,
+        banking_details: Sequelize.INTEGER,
 
         email: Sequelize.STRING,
-        password: Sequelize.VIRTUAL,
-        password_hash: Sequelize.STRING,
       },
       {
         sequelize,
@@ -27,9 +34,13 @@ class User extends Model {
     return this;
   }
 
+  static associate(models) {
+    this.hasMany(models.Address, { foreignKey: 'client_id', as: 'addresses' });
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
 }
 
-export default User;
+export default Client;
