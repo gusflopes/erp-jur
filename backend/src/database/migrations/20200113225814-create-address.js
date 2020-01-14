@@ -7,6 +7,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
+      // Será que preciso de uma Foreign Key relacionado Company?
       client_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -22,6 +23,7 @@ module.exports = {
       city: { type: Sequelize.STRING, allowNull: false },
       state: { type: Sequelize.STRING, allowNull: false },
       country: { type: Sequelize.STRING, allowNull: true },
+
       created_at: { type: Sequelize.DATE, allowNull: false },
       updated_at: { type: Sequelize.DATE, allowNull: false },
     });
