@@ -1,0 +1,1 @@
+const judiciario = {sigla: 'J', descricao: 'Judiciário', [ {1: 'Supremo Tribunal Federal'}, {2: 'Conselho Nacional de Justiça'}, {3: 'Superior Tribunal de Justiça'}, { 4: 'Justiça Federal'}, {5: 'Justiça do Trabalho'}, {6: 'Justiça Eleitoral'}, {7: 'Justiça Militar da União'}, {8: 'Justiça dos Estados'}, {9: 'Justiça Militar Estadual'} ] }
